@@ -101,7 +101,7 @@ function addAnotherUpdateBlock() {
 function loadTrackedStock() {
   const tableBody = document.querySelector("#stockTable tbody");
 
-  // Simulated data or real-time fetch from updates
+  // Simulated data or real-time fetch from updates. Not sure how to link the two
   const qtyMap = {
     "Beef Mince": 25,
     "Chicken Fillets": 40,
@@ -111,7 +111,7 @@ function loadTrackedStock() {
     "Boerewors": 45
   };
 
-  // Optional: Update qtyMap based on actual "updateList" in localStorage
+  // Update qtyMap based on actual "updateList" in localStorage
   const updates = JSON.parse(localStorage.getItem("updateList")) || [];
   updates.forEach(({ item, qty }) => {
     if (qtyMap[item]) {
